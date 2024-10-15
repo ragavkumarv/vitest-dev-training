@@ -84,3 +84,9 @@ describe('Merge in two elements', () => {
 
 // toBe -> primitive
 // toEqual -> objects, arrays, nested
+
+// Topic - Spying
+// Nested function
+// fn 0 - Test  -  unit test 0
+      // fn 1 - unit test 1
+      // fn 2 - unit test 2
