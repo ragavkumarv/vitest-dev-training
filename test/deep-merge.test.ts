@@ -36,6 +36,17 @@ describe('Merge in two elements', () => {
       name: 'guru',
     });
   });
+
+  it('Merging two different Types [Error]', () => {
+
+
+    expect(() => deepMerge(
+      { name: 'guru', age: 20, accounts: { github: 'unknown' } },
+      ['rabbit 🐇', "Sparrow 🐦"]
+    )).toThrowError("Can not merge two differnet types");
+  });
+
+  
 });
 
 // toBe -> primitive
