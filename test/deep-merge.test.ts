@@ -52,7 +52,7 @@ describe('Merge in two elements', () => {
   
   it('Deep Merging two nested objects - Inline Snapshot', () => {
     const merged = deepMerge(
-      { name: 'guru', age: 40, accounts: { github: 'unknown' } },
+      { name: 'guru', age: 30, accounts: { github: 'unknown' } },
       { accounts: { twitter: 'Gnanaguru18' } }
     );
 
@@ -62,7 +62,7 @@ describe('Merge in two elements', () => {
           "github": "unknown",
           "twitter": "Gnanaguru18",
         },
-        "age": 40,
+        "age": 30,
         "name": "guru",
       }
     `); // new way
