@@ -46,7 +46,26 @@ describe('Merge in two elements', () => {
       { accounts: { twitter: 'Gnanaguru18' } }
     );
 
-    expect(merged).toMatchSnapshot(); // correct
+    expect(merged).toMatchSnapshot(); // old way
+  });
+
+  
+  it('Deep Merging two nested objects - Inline Snapshot', () => {
+    const merged = deepMerge(
+      { name: 'guru', age: 40, accounts: { github: 'unknown' } },
+      { accounts: { twitter: 'Gnanaguru18' } }
+    );
+
+    expect(merged).toMatchInlineSnapshot(`
+      {
+        "accounts": {
+          "github": "unknown",
+          "twitter": "Gnanaguru18",
+        },
+        "age": 40,
+        "name": "guru",
+      }
+    `); // new way
   });
 
 
