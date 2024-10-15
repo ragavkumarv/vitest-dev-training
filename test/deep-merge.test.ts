@@ -36,6 +36,20 @@ describe('Merge in two elements', () => {
       name: 'guru',
     });
   });
+  
+  // Snapshot testing - Regression Bug 🐞
+
+
+  it('Deep Merging two nested objects - Snapshot', () => {
+    const merged = deepMerge(
+      { name: 'guru', age: 40, accounts: { github: 'unknown' } },
+      { accounts: { twitter: 'Gnanaguru18' } }
+    );
+
+    expect(merged).toMatchSnapshot(); // correct
+  });
+
+
 
   it('Merging two different Types [Error]', () => {
 
@@ -46,7 +60,7 @@ describe('Merge in two elements', () => {
     )).toThrowError("Can not merge two differnet types");
   });
 
-  
+
 });
 
 // toBe -> primitive

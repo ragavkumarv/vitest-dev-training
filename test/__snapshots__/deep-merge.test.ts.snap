@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Merge in two elements > Deep Merging two nested objects - Snapshot 1`] = `
+{
+  "accounts": {
+    "github": "unknown",
+    "twitter": "Gnanaguru18",
+  },
+  "age": 20,
+  "name": "guru",
+}
+`;
