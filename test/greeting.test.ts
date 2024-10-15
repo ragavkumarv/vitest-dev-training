@@ -8,6 +8,29 @@ test('greeting', () => {
 
     greeting("Shakthi")
 
-    expect(spy).toBeCalledWith('Hello, Shakthi')
-    expect(spy).toBeCalledTimes(1)
+    expect(spy).toBeCalledWith('Hello, Shakthi') // includes
+    expect(spy).toBeCalledTimes(2)
+
+    expect(spy).toMatchInlineSnapshot(`
+      [MockFunction log] {
+        "calls": [
+          [
+            "Hello, Shakthi",
+          ],
+          [
+            "🎉 Shakthi",
+          ],
+        ],
+        "results": [
+          {
+            "type": "return",
+            "value": undefined,
+          },
+          {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    `)
 })
